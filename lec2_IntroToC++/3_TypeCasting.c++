@@ -30,11 +30,21 @@ int main () {
 
 
     //EXPLICIT TYPECATING 
+
+    // NORMAL CASE
     float fl = 98.23 ;
-    int sum = (int)fl + 1.0 ; 
+    float sum = fl + 1 ; //float + int = float , also stored in float thus answer = 99.23
     cout << sum << endl ;
 
-    unsigned int x = 123 ;  // USING unsigned int only for positive numbers and with more range of numbers
+    // CHANGING THE SUM VARIABLE DATATYPE FROM float TO int
+    int sum2 = fl + 1.0 ;  //98.23+1.0 = 99.23 BUT to store in INT ; 99.23 == 99
+    cout << sum2 << endl ;
+
+    // EXPLICIT CONVERSION/TYPECASTING
+    int sum3 = (int)fl + 1.0 ;
+    cout << sum3 << endl ;
+
+    unsigned int x = 123 ; //USING unsigned int only for positive numbers and with more range of numbers
     cout << x << endl ;
 
 
@@ -42,7 +52,4 @@ int main () {
     cout << y << endl ;   // The output will be a very big number, coz here MSB = 1 , it doesnt consider
                           // for the Negative numbers so it just takes the 2's comp bits     
 
-
-    cout << 2/5 << endl ; // will print 0 , as int/int = int 
-    cout << 2.0/5 << endl ; // will print 0.4 , as float/int = float
 }
